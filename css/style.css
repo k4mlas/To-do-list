@@ -8,11 +8,13 @@
 
 :root {
   --first-color1: rgb(255, 255, 255);
-  --first-color2: rgb(234, 220, 220);
-  --second-color1: rgb(30, 28, 28);
-  --second-color2: rgb(70, 61, 61);
-  --border-color1: rgba(255, 255, 255, 0.2);
-  --border-color2: rgba(0, 0, 0, 0.2);
+  --first-color2: rgb(235, 221, 221);
+  --second-color1: rgb(70, 59, 59);
+  --second-color2: rgb(30, 28, 28);
+  --border-color1: rgb(255, 255, 255);
+  --border-color2: rgb(0, 0, 0);
+  --btn-color1: rgb(76, 225, 39);
+  --btn-color2: rgb(32, 108, 22);
 }
 
 body {
@@ -100,6 +102,11 @@ body {
   font-weight: bold;
   font-size: 1.3rem;
   text-transform: uppercase;
-  background-color: green;
+  background-color: var(--btn-color1);
   cursor: pointer;
+  transition: color 0.4s, background-color 0.4s;
+}
+.list__header__btn:hover {
+  background-color: var(--btn-color2);
+  color: var(--first-color1);
 }/*# sourceMappingURL=style.css.map */
