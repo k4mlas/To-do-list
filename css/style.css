@@ -109,6 +109,9 @@ body {
   background-color: var(--btn-color2);
   color: var(--first-color1);
 }
+.list__body {
+  padding: 1.5rem;
+}
 .list__body__info {
   padding: 1.5rem;
   font-size: 2.5rem;
