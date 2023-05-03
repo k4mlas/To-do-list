@@ -161,7 +161,7 @@ body {
 }
 
 .edit {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -224,4 +224,28 @@ body {
 .edit__panel__btn__cancel:hover {
   background-color: rgb(240, 44, 44);
   color: var(--first-color1);
+}
+
+.set {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(72, 84, 97, 0.6392156863);
+  background-image: linear-gradient(315deg, rgba(72, 84, 97, 0.8392156863) 0%, #28313b 74%);
+}
+.set__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 400px;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 20px;
+  background-color: var(--first-color1);
 }/*# sourceMappingURL=style.css.map */
