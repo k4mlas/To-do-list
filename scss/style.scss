@@ -196,8 +196,7 @@ body {
 			border: none;
 		}
 		&__btn {
-		
-			button {
+			&__opction {
 				width: 6.5rem;
 				height: 2.5rem;
 				margin: 1.25rem;
@@ -208,26 +207,26 @@ body {
 				font-weight: 700;
 				cursor: pointer;
 				transition: color 0.4s, background-color 0.4s;
-			}
-			&__save {
-				background-color: var(--btn-color1);
-				&:hover {
-					background-color: var(--btn-color2);
-					color: var(--first-color1);
+				&--save {
+					background-color: var(--btn-color1);
+					&:hover {
+						background-color: var(--btn-color2);
+						color: var(--first-color1);
+					}
 				}
-			}
-			&__cancel {
-				background-color: rgb(242, 91, 91);
-				&:hover {
-					background-color: rgb(240, 44, 44);
-					color: var(--first-color1);
+				&--cancel {
+					background-color: rgb(242, 91, 91);
+					&:hover {
+						background-color: rgb(240, 44, 44);
+						color: var(--first-color1);
+					}
 				}
 			}
 		}
 	}
 }
 .set {
-	display: none; //Zmiana w JS na flex
+	display: flex; //Zmiana w JS na flex
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -241,11 +240,103 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 700px;
-		height: 400px;
-		padding: 2rem;
-		border-radius: 15px;
-		margin-top: 20px;
+		position: relative;
+		width: 56.25rem;
+		height: 31.25rem;
+		border-radius: 0.938rem;
+		margin-top: 1.25rem;
 		background-color: var(--first-color1);
+		&__close {
+			position: absolute;
+			top: 15px;
+			right: 25px;
+			width: 50px;
+			height: 50px;
+			border: none;
+			background: none;
+			cursor: pointer;
+			&:hover > i {
+				transform: rotate(180deg);
+			}
+			i {
+				font-size: 2.7rem;
+				transition: transform 0.4s;
+			}
+		}
+		&__color {
+			width: 100%;
+			&__text {
+				font-size: 2rem;
+				text-align: center;
+			}
+			&__btn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&__opction {
+					width: 50px;
+					height: 50px;
+					margin: 20px;
+					border-radius: 50%;
+					border: none;
+					cursor: pointer;
+					transition: transform 0.4s;
+					&:hover {
+						transform: scale(0.8);
+					}
+					&--light {
+						background-color: var(--first-color2);
+					}
+					&--dark {
+						background-color: var(--second-color1);
+					}
+				}
+			}
+		}
+		&__img {
+			width: 100%;
+			&__text {
+				font-size: 2rem;
+				text-align: center;
+			}
+			&__opction {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 40px;
+				width: 100%;
+				&__picture {
+					width: 200px;
+					height: 150px;
+					margin: 20px;
+					border-radius: 15%;
+					cursor: pointer;
+					&--one {
+						background-image: url(../img/arrizona.jpg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: 120%;
+					}
+					&--two {
+						background-image: url(../img/city.jpg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: 120%;
+					}
+					&--three {
+						background-image: url(../img/default.jpg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: 100%;
+					}
+					&--four {
+						background-image: url(../img/zebra.jpg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+		}
 	}
 }

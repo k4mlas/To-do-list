@@ -198,7 +198,7 @@ body {
   border-radius: 1.25rem;
   border: none;
 }
-.edit__panel__btn button {
+.edit__panel__btn__opction {
   width: 6.5rem;
   height: 2.5rem;
   margin: 1.25rem;
@@ -210,23 +210,23 @@ body {
   cursor: pointer;
   transition: color 0.4s, background-color 0.4s;
 }
-.edit__panel__btn__save {
+.edit__panel__btn__opction--save {
   background-color: var(--btn-color1);
 }
-.edit__panel__btn__save:hover {
+.edit__panel__btn__opction--save:hover {
   background-color: var(--btn-color2);
   color: var(--first-color1);
 }
-.edit__panel__btn__cancel {
+.edit__panel__btn__opction--cancel {
   background-color: rgb(242, 91, 91);
 }
-.edit__panel__btn__cancel:hover {
+.edit__panel__btn__opction--cancel:hover {
   background-color: rgb(240, 44, 44);
   color: var(--first-color1);
 }
 
 .set {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -241,10 +241,102 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 700px;
-  height: 400px;
-  padding: 2rem;
-  border-radius: 15px;
-  margin-top: 20px;
+  position: relative;
+  width: 56.25rem;
+  height: 31.25rem;
+  border-radius: 0.938rem;
+  margin-top: 1.25rem;
   background-color: var(--first-color1);
+}
+.set__body__close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.set__body__close:hover > i {
+  transform: rotate(180deg);
+}
+.set__body__close i {
+  font-size: 2.7rem;
+  transition: transform 0.4s;
+}
+.set__body__color {
+  width: 100%;
+}
+.set__body__color__text {
+  font-size: 2rem;
+  text-align: center;
+}
+.set__body__color__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.set__body__color__btn__opction {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.set__body__color__btn__opction:hover {
+  transform: scale(0.8);
+}
+.set__body__color__btn__opction--light {
+  background-color: var(--first-color2);
+}
+.set__body__color__btn__opction--dark {
+  background-color: var(--second-color1);
+}
+.set__body__img {
+  width: 100%;
+}
+.set__body__img__text {
+  font-size: 2rem;
+  text-align: center;
+}
+.set__body__img__opction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+.set__body__img__opction__picture {
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  border-radius: 15%;
+  cursor: pointer;
+}
+.set__body__img__opction__picture--one {
+  background-image: url(../img/arrizona.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
+.set__body__img__opction__picture--two {
+  background-image: url(../img/city.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
+.set__body__img__opction__picture--three {
+  background-image: url(../img/default.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.set__body__img__opction__picture--four {
+  background-image: url(../img/zebra.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }/*# sourceMappingURL=style.css.map */
