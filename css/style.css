@@ -141,10 +141,24 @@ body {
 .list__body__quest__tools button {
   width: 100%;
   height: 100%;
+  cursor: pointer;
+  border: none;
 }
 .list__body__quest__tools button i {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
+  transition: transform 0.4s;
+}
+.list__body__quest__tools button:hover > i {
+  transform: scale(2);
+}
+.list__body__quest__tools__check {
+  background-color: rgb(64, 232, 64);
 }
 .list__body__quest__tools__edit {
   text-transform: uppercase;
+  font-size: 0.8rem;
+  background-color: orange;
+}
+.list__body__quest__tools__delete {
+  background-color: rgb(242, 91, 91);
 }/*# sourceMappingURL=style.css.map */
