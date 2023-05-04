@@ -59,24 +59,24 @@ const checkImgOne = () => {
 	headerImg.style.backgroundImage = 'url(../img/arrizona.jpg)';
 };
 const checkImgTwo = () => {
-	pictureOne.classList.add('activ');
-	pictureTwo.classList.remove('activ');
+	pictureOne.classList.remove('activ');
+	pictureTwo.classList.add('activ');
 	pictureThree.classList.remove('activ');
 	pictureFour.classList.remove('activ');
 	headerImg.style.backgroundImage = 'url(../img/city.jpg)';
 };
 const checkImgThree = () => {
-	pictureOne.classList.add('activ');
+	pictureOne.classList.remove('activ');
 	pictureTwo.classList.remove('activ');
-	pictureThree.classList.remove('activ');
+	pictureThree.classList.add('activ');
 	pictureFour.classList.remove('activ');
 	headerImg.style.backgroundImage = 'url(../img/default.jpg)';
 };
 const checkImgFour = () => {
-	pictureOne.classList.add('activ');
+	pictureOne.classList.remove('activ');
 	pictureTwo.classList.remove('activ');
 	pictureThree.classList.remove('activ');
-	pictureFour.classList.remove('activ');
+	pictureFour.classList.add('activ');
 	headerImg.style.backgroundImage = 'url(../img/zebra.jpg)';
 };
 
