@@ -16,9 +16,9 @@
   --toDo-light: rgb(235, 221, 221);
   --toDo-dark: rgb(70, 59, 59);
   --set-color-light: rgb(199, 181, 181);
-  --second-color2: rgb(30, 28, 28);
   --btn-color1: rgb(76, 225, 39);
   --btn-color2: rgb(32, 108, 22);
+  color: rgb(196, 156, 156);
 }
 
 body {
@@ -296,10 +296,10 @@ body {
   transform: scale(0.8);
 }
 .set__body__color__btn__opction--light {
-  background-color: var(--background-colorLight);
+  background-color: rgb(235, 221, 221);
 }
 .set__body__color__btn__opction--dark {
-  background-color: var(--background-colorDark);
+  background-color: rgb(70, 59, 59);
 }
 .set__body__img {
   width: 100%;

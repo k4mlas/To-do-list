@@ -7,19 +7,18 @@
 }
 
 :root {
-	--background-colorLight: rgb(235, 221, 221); //kolor tła light
-	--background-colorDark: rgb(70, 59, 59); //kolor tła dark
-	--colorTextBlack: rgb(0, 0, 0); //kolor czcionki light
-	--colorTextWhite: rgb(255, 255, 255); //kolor czcionki dark
-	--list-colorLight: rgb(255, 255, 255); //kolor tła listy light
-	--list-colorDark: rgb(28, 25, 25); //kolor tła listy light
+	--background-colorLight: rgb(235, 221, 221);
+	--background-colorDark: rgb(70, 59, 59);
+	--colorTextBlack: rgb(0, 0, 0);
+	--colorTextWhite: rgb(255, 255, 255);
+	--list-colorLight: rgb(255, 255, 255);
+	--list-colorDark: rgb(28, 25, 25);
 	--toDo-light: rgb(235, 221, 221);
 	--toDo-dark: rgb(70, 59, 59);
-	--set-color-light: rgb(199, 181, 181); //kolor panelu dark
-	--second-color2: rgb(30, 28, 28);
-
+	--set-color-light: rgb(199, 181, 181);
 	--btn-color1: rgb(76, 225, 39);
 	--btn-color2: rgb(32, 108, 22);
+	color: rgb(196, 156, 156)
 }
 
 body {
@@ -293,10 +292,10 @@ body {
 						transform: scale(0.8);
 					}
 					&--light {
-						background-color: var(--background-colorLight);
+						background-color: rgb(235, 221, 221);
 					}
 					&--dark {
-						background-color: var(--background-colorDark);
+						background-color: rgb(70, 59, 59);
 					}
 				}
 			}
