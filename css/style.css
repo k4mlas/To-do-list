@@ -7,12 +7,16 @@
 }
 
 :root {
-  --first-color1: rgb(255, 255, 255);
-  --first-color2: rgb(235, 221, 221);
-  --second-color1: rgb(70, 59, 59);
+  --background-colorLight: rgb(235, 221, 221);
+  --background-colorDark: rgb(70, 59, 59);
+  --colorTextBlack: rgb(0, 0, 0);
+  --colorTextWhite: rgb(255, 255, 255);
+  --list-colorLight: rgb(255, 255, 255);
+  --list-colorDark: rgb(28, 25, 25);
+  --toDo-light: rgb(235, 221, 221);
+  --toDo-dark: rgb(70, 59, 59);
+  --set-color-light: rgb(199, 181, 181);
   --second-color2: rgb(30, 28, 28);
-  --border-color1: rgb(255, 255, 255);
-  --border-color2: rgb(0, 0, 0);
   --btn-color1: rgb(76, 225, 39);
   --btn-color2: rgb(32, 108, 22);
 }
@@ -23,13 +27,13 @@ body {
   align-items: center;
   height: 100vh;
   font-family: "Montserrat", sans-serif;
-  color: var(--second-color1);
-  background-color: var(--first-color2);
+  color: var(--colorTextBlack);
+  background-color: var(--background-colorLight);
 }
 
 .list {
   width: 50rem;
-  background-color: var(--first-color1);
+  background-color: var(--list-colorLight);
   border-radius: 1.25rem;
   overflow: hidden;
 }
@@ -53,12 +57,12 @@ body {
 }
 .list__header__set i {
   font-size: 1.5rem;
-  color: var(--second-color1);
+  color: black;
   transition: transform 0.5s, color 0.5s;
 }
 .list__header__set i:hover {
   transform: rotate(180deg);
-  color: var(--first-color1);
+  color: white;
 }
 .list__header__title {
   position: absolute;
@@ -97,7 +101,7 @@ body {
   height: 3rem;
   border-radius: 0.625rem;
   border: none;
-  color: var(--second-color1);
+  color: black;
   font-weight: bold;
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -107,7 +111,7 @@ body {
 }
 .list__header__btn:hover {
   background-color: var(--btn-color2);
-  color: var(--first-color1);
+  color: white;
 }
 .list__body {
   padding: 2.5rem;
@@ -130,7 +134,7 @@ body {
   font-size: 1.2rem;
   list-style: none;
   text-align: left;
-  background-color: var(--first-color2);
+  background-color: var(--toDo-light);
 }
 .list__body__quest__tools {
   display: inline-block;
@@ -169,9 +173,9 @@ body {
   width: 43.75rem;
   height: 18.75rem;
   border-radius: 15px;
-  color: var(--first-color1);
-  background-color: #485461;
-  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  color: black;
+  background-color: #c3cbdc;
+  background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
 }
 .edit__panel {
   display: flex;
@@ -215,18 +219,18 @@ body {
 }
 .edit__panel__btn__opction--save:hover {
   background-color: var(--btn-color2);
-  color: var(--first-color1);
+  color: white;
 }
 .edit__panel__btn__opction--cancel {
   background-color: rgb(242, 91, 91);
 }
 .edit__panel__btn__opction--cancel:hover {
   background-color: rgb(240, 44, 44);
-  color: var(--first-color1);
+  color: white;
 }
 
 .set {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -235,6 +239,7 @@ body {
   height: 100%;
   background-color: rgba(72, 84, 97, 0.6392156863);
   background-image: linear-gradient(315deg, rgba(72, 84, 97, 0.8392156863) 0%, #28313b 74%);
+  transition: display 0.4s;
 }
 .set__body {
   display: flex;
@@ -246,7 +251,7 @@ body {
   height: 31.25rem;
   border-radius: 0.938rem;
   margin-top: 1.25rem;
-  background-color: var(--first-color1);
+  background-color: var(--set-color-light);
 }
 .set__body__close {
   position: absolute;
@@ -260,10 +265,11 @@ body {
 }
 .set__body__close:hover > i {
   transform: rotate(180deg);
+  color: white;
 }
 .set__body__close i {
   font-size: 2.7rem;
-  transition: transform 0.4s;
+  transition: transform 0.4s, color 0.4s;
 }
 .set__body__color {
   width: 100%;
@@ -290,10 +296,10 @@ body {
   transform: scale(0.8);
 }
 .set__body__color__btn__opction--light {
-  background-color: var(--first-color2);
+  background-color: var(--background-colorLight);
 }
 .set__body__color__btn__opction--dark {
-  background-color: var(--second-color1);
+  background-color: var(--background-colorDark);
 }
 .set__body__img {
   width: 100%;
@@ -315,6 +321,10 @@ body {
   margin: 20px;
   border-radius: 15%;
   cursor: pointer;
+  transition: transform 0.4s;
+}
+.set__body__img__opction__picture:hover {
+  transform: scale(1.1);
 }
 .set__body__img__opction__picture--one {
   background-image: url(../img/arrizona.jpg);
