@@ -19,10 +19,19 @@ const closeSetPanel = () => {
 };
 
 const checkLight = () => {
-	root.style.setProperty('--first-color1', 'rgb(70, 59, 59)');
-	root.style.setProperty('--second-color1', 'rgb(30, 28, 28)i');
+	root.style.setProperty('--background-colorLight', 'rgb(235, 221, 221)');
+	root.style.setProperty('--colorTextBlack', 'rgb(0, 0, 0)');
+	root.style.setProperty('--list-colorLight', 'rgb(255, 255, 255)');
+	root.style.setProperty('--toDo-light', 'rgb(235, 221, 221)');
+};
+const checkDark = () => {
+	root.style.setProperty('--background-colorLight', 'rgb(70, 59, 59)');
+	root.style.setProperty('--colorTextBlack', 'rgb(255, 255, 255)');
+	root.style.setProperty('--list-colorLight', 'rgb(28, 25, 25)');
+	root.style.setProperty('--toDo-light', 'rgb(70, 59, 59)');
 };
 
 setBtnOpen.addEventListener('click', showSetPanel);
 setBtnClose.addEventListener('click', closeSetPanel);
 lightBtn.addEventListener('click', checkLight);
+darkBtn.addEventListener('click', checkDark);

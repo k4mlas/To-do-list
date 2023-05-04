@@ -232,7 +232,7 @@ body {
 	}
 }
 .set {
-	display: flex; //Zmiana w JS na flex
+	display: none; //Zmiana w JS na flex
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -351,4 +351,7 @@ body {
 			}
 		}
 	}
+}
+.activ {
+	border: 9px solid rgb(134, 134, 255);
 }
