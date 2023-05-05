@@ -81,7 +81,13 @@ const prepareDOMEvens = () => {
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 const addNewTask = () => {
-	console.log('plplp');
+	if ($todoInput.value !== '') {
+		$idNumber++;
+		$newTask = document.createElement('li');
+		$newTask.innerText = $todoInput.value;
+		$newTask.classList.add("list__body__quest__text")
+		$ullist.appendChild($newTask);
+	}
 };
 
 const enterKey = () => {
