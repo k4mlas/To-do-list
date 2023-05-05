@@ -66,6 +66,8 @@ const prepareDOMElements = () => {
 };
 
 const prepareDOMEvens = () => {
+	$addBtn.addEventListener('click', addNewTask);
+	$todoInput.addEventListener('keyup', enterKey);
 	$setBtnOpen.addEventListener('click', showSetPanel);
 	$setBtnClose.addEventListener('click', closeSetPanel);
 	$lightBtn.addEventListener('click', checkLight);
@@ -76,7 +78,17 @@ const prepareDOMEvens = () => {
 	$pictureFour.addEventListener('click', checkImgFour);
 };
 
-//---------------------------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////////////////
+
+const addNewTask = () => {
+	console.log('plplp');
+};
+
+const enterKey = () => {
+	if (event.keyCode === 13) {
+		addNewTask();
+	}
+};
 
 const showSetPanel = () => {
 	$setPanel.style.display = 'flex';
