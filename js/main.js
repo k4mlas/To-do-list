@@ -68,6 +68,7 @@ const prepareDOMElements = () => {
 const prepareDOMEvens = () => {
 	$addBtn.addEventListener('click', addNewTask);
 	$todoInput.addEventListener('keyup', enterKey);
+	$ullist.addEventListener('click', checkClick);
 	$setBtnOpen.addEventListener('click', showSetPanel);
 	$setBtnClose.addEventListener('click', closeSetPanel);
 	$lightBtn.addEventListener('click', checkLight);
@@ -120,6 +121,28 @@ const createToolsArea = () => {
 	toolsPanel.appendChild(deleteBtnTools);
 };
 
+const checkClick = (e) => {
+	if (
+		e.target
+			.closest('button')
+			.classList.contains('list__body__quest__tools__check')
+	) {
+		e.target.closest('li').classList.toggle('finish');
+	} else if (
+		e.target
+			.closest('button')
+			.classList.contains('list__body__quest__tools__edit')
+	) {
+		console.log('Edit');
+	} else if (
+		e.target
+			.closest('button')
+			.classList.contains('list__body__quest__tools__delete')
+	) {
+		console.log('deletr');
+	}
+};
+
 const showSetPanel = () => {
 	$setPanel.style.display = 'flex';
 };
@@ -151,29 +174,28 @@ const checkImgOne = () => {
 	$pictureTwo.classList.remove('activ');
 	$pictureThree.classList.remove('activ');
 	$pictureFour.classList.remove('activ');
-	$headerImg.style.backgroundImage =
-		'url(../img/arrizona.jpg)';
+	$headerImg.style.backgroundImage = 'url(../img/arrizona.jpg)';
 };
 const checkImgTwo = () => {
 	$pictureOne.classList.remove('activ');
 	$pictureTwo.classList.add('activ');
 	$pictureThree.classList.remove('activ');
 	$pictureFour.classList.remove('activ');
-	$headerImg.style.backgroundImage = 'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/city.jpg)';
+	$headerImg.style.backgroundImage = 'url(../img/city.jpg)';
 };
 const checkImgThree = () => {
 	$pictureOne.classList.remove('activ');
 	$pictureTwo.classList.remove('activ');
 	$pictureThree.classList.add('activ');
 	$pictureFour.classList.remove('activ');
-	$headerImg.style.backgroundImage = 'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/default.jpg)';
+	$headerImg.style.backgroundImage = 'url(../img/default.jpg)';
 };
 const checkImgFour = () => {
 	$pictureOne.classList.remove('activ');
 	$pictureTwo.classList.remove('activ');
 	$pictureThree.classList.remove('activ');
 	$pictureFour.classList.add('activ');
-	$headerImg.style.backgroundImage = 'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/zebra.jpg)';
+	$headerImg.style.backgroundImage = 'url(../img/zebra.jpg)';
 };
 ///////////////////////////////////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', main);

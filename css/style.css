@@ -354,4 +354,11 @@ body {
 
 .activ {
   border: 9px solid rgb(134, 134, 255);
+}
+
+.finish {
+  font-size: 1rem;
+  color: rgb(100, 53, 53);
+  font-style: italic;
+  text-decoration: line-through;
 }/*# sourceMappingURL=style.css.map */
