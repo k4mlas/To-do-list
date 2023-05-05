@@ -151,28 +151,29 @@ const checkImgOne = () => {
 	$pictureTwo.classList.remove('activ');
 	$pictureThree.classList.remove('activ');
 	$pictureFour.classList.remove('activ');
-	$headerImg.style.backgroundImage = 'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/arrizona.jpg)';
+	$headerImg.style.backgroundImage =
+		'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/arrizona.jpg)';
 };
 const checkImgTwo = () => {
 	$pictureOne.classList.remove('activ');
 	$pictureTwo.classList.add('activ');
 	$pictureThree.classList.remove('activ');
 	$pictureFour.classList.remove('activ');
-	$headerImg.style.backgroundImage = 'url(..ToDoLista2/img/city.jpg)';
+	$headerImg.style.backgroundImage = 'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/city.jpg)';
 };
 const checkImgThree = () => {
 	$pictureOne.classList.remove('activ');
 	$pictureTwo.classList.remove('activ');
 	$pictureThree.classList.add('activ');
 	$pictureFour.classList.remove('activ');
-	$headerImg.style.backgroundImage = 'url(../img/default.jpg)';
+	$headerImg.style.backgroundImage = 'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/default.jpg)';
 };
 const checkImgFour = () => {
 	$pictureOne.classList.remove('activ');
 	$pictureTwo.classList.remove('activ');
 	$pictureThree.classList.remove('activ');
 	$pictureFour.classList.add('activ');
-	$headerImg.style.backgroundImage = 'url(../img/zebra.jpg)';
+	$headerImg.style.backgroundImage = 'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/zebra.jpg)';
 };
 ///////////////////////////////////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', main);
