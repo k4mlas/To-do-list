@@ -45,6 +45,7 @@ const prepareDOMElements = () => {
 	$lightBtn = document.querySelector('.set__body__color__btn__opction--light');
 	$darkBtn = document.querySelector('.set__body__color__btn__opction--dark');
 	//Zmienne do zmiany obrazka w header
+	$headerImg = document.querySelector('.list__header');
 	$pictureOne = document.querySelector(
 		'.set__body__img__opction__picture--one'
 	);
@@ -57,7 +58,6 @@ const prepareDOMElements = () => {
 	$pictureFour = document.querySelector(
 		'.set__body__img__opction__picture--four'
 	);
-	$headerImg = document.querySelector('.list__header');
 	//Zmiene do ToDoListy
 	$todoInput = document.querySelector('#listInput');
 	$addBtn = document.querySelector('.list__header__btn');
@@ -151,14 +151,14 @@ const checkImgOne = () => {
 	$pictureTwo.classList.remove('activ');
 	$pictureThree.classList.remove('activ');
 	$pictureFour.classList.remove('activ');
-	$headerImg.style.backgroundImage = 'url(../img/arrizona.jpg)';
+	$headerImg.style.backgroundImage = 'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/arrizona.jpg)';
 };
 const checkImgTwo = () => {
 	$pictureOne.classList.remove('activ');
 	$pictureTwo.classList.add('activ');
 	$pictureThree.classList.remove('activ');
 	$pictureFour.classList.remove('activ');
-	$headerImg.style.backgroundImage = 'url(../img/city.jpg)';
+	$headerImg.style.backgroundImage = 'url(..ToDoLista2/img/city.jpg)';
 };
 const checkImgThree = () => {
 	$pictureOne.classList.remove('activ');
