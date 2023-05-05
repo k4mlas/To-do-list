@@ -1,3 +1,37 @@
+//Zmiene do ToDoListy
+let $todoInput; // miejsce, gdzie uzytkownik wpisuje tresé
+let $alertInfo; // info o braku zadan / koniecznosci dodania tekstu
+let $addBtn; // przycisk ADD - dodaje nowe elementy do listy
+let $ullist; // nasza Lista zadan, tagi <ul></ul›
+let $newTask; // now dodany LI, nowe zadanie
+let $allTasks; // Lista wszystkich dodanych LI
+let $idNumber = 0; // ID dodawane do kazdego nowego zadania
+let $popup; //pobrany popup
+let $popupInfo; // alert w popupie, jak sie doda pusty tekst
+let $editedTodo; // edytowany Todo
+let $popupInput; //tekst wisywany w inputa w popup 'ie
+let $addPopupBtn; // przycisk "zatwierdz" w popup 'ie
+let $closeTodoBtn; //przycisk od zamykania popup'a
+//Zmienne do otwarcia panelu ustawień
+let $setPanel; //Panel ustawień
+let $setBtnOpen; //Przycisk otwierania panelu ustawień
+let $setBtnClose; //Przycisk zamykania panelu ustawień
+//Zmienne do zmiany motywu
+let $root; //Root zmienne kolorów
+let $setBody; //Wewnętrzny Panel ustawień
+let $lightBtn; //Przycisk jasny motyw
+let $darkBtn; //Przycisk ciemny motyw
+//Zmienne do zmiany obrazka w header
+let $headerImg; //Obrazek w headerze
+let $pictureOne; //Obrazek pierwszy w panelu ustawień
+let $pictureTwo; //Obrazek drugi w panelu ustawień
+let $pictureThree; //Obrazek trzeci w panelu ustawień
+let $pictureFour; //Obrazek czwarty w panelu ustawień
+
+
+
+
+
 //close and open set Panel
 const setPanel = document.querySelector('.set');
 const setBtnOpen = document.querySelector('.list__header__set');
@@ -23,7 +57,13 @@ const pictureFour = document.querySelector(
 	'.set__body__img__opction__picture--four'
 );
 const headerImg = document.querySelector('.list__header');
+// List
+const listInput = document.querySelector('#listInput');
+const addBtn = document.querySelector('.list__header__btn');
+const listBody = document.querySelector('.list__body__quest');
 //---------------------------------------------------------------------------------------------------
+
+const addList = () => {};
 
 const showSetPanel = () => {
 	setPanel.style.display = 'flex';
