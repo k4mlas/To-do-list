@@ -27,104 +27,110 @@ let $pictureOne; //Obrazek pierwszy w panelu ustawień
 let $pictureTwo; //Obrazek drugi w panelu ustawień
 let $pictureThree; //Obrazek trzeci w panelu ustawień
 let $pictureFour; //Obrazek czwarty w panelu ustawień
+////////////////////////////////////////////////////////////////////////////////////////////////
 
+const main = () => {
+	prepareDOMElements();
+	prepareDOMEvens();
+};
 
+const prepareDOMElements = () => {
+	//Zmienne do otwarcia panelu ustawień
+	$setPanel = document.querySelector('.set');
+	$setBtnOpen = document.querySelector('.list__header__set');
+	$setBtnClose = document.querySelector('.set__body__close');
+	//Zmienne do zmiany motywu
+	$root = document.documentElement;
+	$setBody = document.querySelector('.set__body');
+	$lightBtn = document.querySelector('.set__body__color__btn__opction--light');
+	$darkBtn = document.querySelector('.set__body__color__btn__opction--dark');
+	//Zmienne do zmiany obrazka w header
+	$pictureOne = document.querySelector(
+		'.set__body__img__opction__picture--one'
+	);
+	$pictureTwo = document.querySelector(
+		'.set__body__img__opction__picture--two'
+	);
+	$pictureThree = document.querySelector(
+		'.set__body__img__opction__picture--three'
+	);
+	$pictureFour = document.querySelector(
+		'.set__body__img__opction__picture--four'
+	);
+	$headerImg = document.querySelector('.list__header');
+	//Zmiene do ToDoListy
+	$todoInput = document.querySelector('#listInput');
+	$addBtn = document.querySelector('.list__header__btn');
+	$alertInfo = document.querySelector('.list__body__info');
+	$ullist = document.querySelector('.list__body__quest');
+};
 
+const prepareDOMEvens = () => {
+	$setBtnOpen.addEventListener('click', showSetPanel);
+	$setBtnClose.addEventListener('click', closeSetPanel);
+	$lightBtn.addEventListener('click', checkLight);
+	$darkBtn.addEventListener('click', checkDark);
+	$pictureOne.addEventListener('click', checkImgOne);
+	$pictureTwo.addEventListener('click', checkImgTwo);
+	$pictureThree.addEventListener('click', checkImgThree);
+	$pictureFour.addEventListener('click', checkImgFour);
+};
 
-
-//close and open set Panel
-const setPanel = document.querySelector('.set');
-const setBtnOpen = document.querySelector('.list__header__set');
-const setBtnClose = document.querySelector('.set__body__close');
-//change layout
-let root = document.documentElement;
-const setBody = document.querySelector('.set__body');
-const lightBtn = document.querySelector(
-	'.set__body__color__btn__opction--light'
-);
-const darkBtn = document.querySelector('.set__body__color__btn__opction--dark');
-//chenge img main
-const pictureOne = document.querySelector(
-	'.set__body__img__opction__picture--one'
-);
-const pictureTwo = document.querySelector(
-	'.set__body__img__opction__picture--two'
-);
-const pictureThree = document.querySelector(
-	'.set__body__img__opction__picture--three'
-);
-const pictureFour = document.querySelector(
-	'.set__body__img__opction__picture--four'
-);
-const headerImg = document.querySelector('.list__header');
-// List
-const listInput = document.querySelector('#listInput');
-const addBtn = document.querySelector('.list__header__btn');
-const listBody = document.querySelector('.list__body__quest');
 //---------------------------------------------------------------------------------------------------
 
-const addList = () => {};
-
 const showSetPanel = () => {
-	setPanel.style.display = 'flex';
+	$setPanel.style.display = 'flex';
 };
 const closeSetPanel = () => {
-	setPanel.style.display = 'none';
+	$setPanel.style.display = 'none';
 };
 
 const checkLight = () => {
-	root.style.setProperty('--background-colorLight', 'rgb(235, 221, 221)');
-	root.style.setProperty('--colorTextBlack', 'rgb(0, 0, 0)');
-	root.style.setProperty('--list-colorLight', 'rgb(255, 255, 255)');
-	root.style.setProperty('--toDo-light', 'rgb(235, 221, 221)');
-	root.style.setProperty('--set-color-light', 'rgb(199, 181, 181)');
-	lightBtn.classList.add('activ');
-	darkBtn.classList.remove('activ');
+	$root.style.setProperty('--background-colorLight', 'rgb(235, 221, 221)');
+	$root.style.setProperty('--colorTextBlack', 'rgb(0, 0, 0)');
+	$root.style.setProperty('--list-colorLight', 'rgb(255, 255, 255)');
+	$root.style.setProperty('--toDo-light', 'rgb(235, 221, 221)');
+	$root.style.setProperty('--set-color-light', 'rgb(199, 181, 181)');
+	$lightBtn.classList.add('activ');
+	$darkBtn.classList.remove('activ');
 };
 const checkDark = () => {
-	root.style.setProperty('--background-colorLight', 'rgb(70, 59, 59)');
-	root.style.setProperty('--colorTextBlack', 'rgb(255, 255, 255)');
-	root.style.setProperty('--list-colorLight', 'rgb(28, 25, 25)');
-	root.style.setProperty('--toDo-light', 'rgb(70, 59, 59)');
-	root.style.setProperty('--set-color-light', 'rgb(196, 156, 156)');
-	darkBtn.classList.add('activ');
-	lightBtn.classList.remove('activ');
+	$root.style.setProperty('--background-colorLight', 'rgb(70, 59, 59)');
+	$root.style.setProperty('--colorTextBlack', 'rgb(255, 255, 255)');
+	$root.style.setProperty('--list-colorLight', 'rgb(28, 25, 25)');
+	$root.style.setProperty('--toDo-light', 'rgb(70, 59, 59)');
+	$root.style.setProperty('--set-color-light', 'rgb(196, 156, 156)');
+	$darkBtn.classList.add('activ');
+	$lightBtn.classList.remove('activ');
 };
 
 const checkImgOne = () => {
-	pictureOne.classList.add('activ');
-	pictureTwo.classList.remove('activ');
-	pictureThree.classList.remove('activ');
-	pictureFour.classList.remove('activ');
-	headerImg.style.backgroundImage = 'url(../img/arrizona.jpg)';
+	$pictureOne.classList.add('activ');
+	$pictureTwo.classList.remove('activ');
+	$pictureThree.classList.remove('activ');
+	$pictureFour.classList.remove('activ');
+	$headerImg.style.backgroundImage = 'url(../img/arrizona.jpg)';
 };
 const checkImgTwo = () => {
-	pictureOne.classList.remove('activ');
-	pictureTwo.classList.add('activ');
-	pictureThree.classList.remove('activ');
-	pictureFour.classList.remove('activ');
-	headerImg.style.backgroundImage = 'url(../img/city.jpg)';
+	$pictureOne.classList.remove('activ');
+	$pictureTwo.classList.add('activ');
+	$pictureThree.classList.remove('activ');
+	$pictureFour.classList.remove('activ');
+	$headerImg.style.backgroundImage = 'url(../img/city.jpg)';
 };
 const checkImgThree = () => {
-	pictureOne.classList.remove('activ');
-	pictureTwo.classList.remove('activ');
-	pictureThree.classList.add('activ');
-	pictureFour.classList.remove('activ');
-	headerImg.style.backgroundImage = 'url(../img/default.jpg)';
+	$pictureOne.classList.remove('activ');
+	$pictureTwo.classList.remove('activ');
+	$pictureThree.classList.add('activ');
+	$pictureFour.classList.remove('activ');
+	$headerImg.style.backgroundImage = 'url(../img/default.jpg)';
 };
 const checkImgFour = () => {
-	pictureOne.classList.remove('activ');
-	pictureTwo.classList.remove('activ');
-	pictureThree.classList.remove('activ');
-	pictureFour.classList.add('activ');
-	headerImg.style.backgroundImage = 'url(../img/zebra.jpg)';
+	$pictureOne.classList.remove('activ');
+	$pictureTwo.classList.remove('activ');
+	$pictureThree.classList.remove('activ');
+	$pictureFour.classList.add('activ');
+	$headerImg.style.backgroundImage = 'url(../img/zebra.jpg)';
 };
-
-setBtnOpen.addEventListener('click', showSetPanel);
-setBtnClose.addEventListener('click', closeSetPanel);
-lightBtn.addEventListener('click', checkLight);
-darkBtn.addEventListener('click', checkDark);
-pictureOne.addEventListener('click', checkImgOne);
-pictureTwo.addEventListener('click', checkImgTwo);
-pictureThree.addEventListener('click', checkImgThree);
-pictureFour.addEventListener('click', checkImgFour);
+///////////////////////////////////////////////////////////////////////////////////////////
+document.addEventListener('DOMContentLoaded', main);
