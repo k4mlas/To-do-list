@@ -18,7 +18,7 @@
 	--set-color-light: rgb(199, 181, 181);
 	--btn-color1: rgb(76, 225, 39);
 	--btn-color2: rgb(32, 108, 22);
-	color: rgb(196, 156, 156)
+	color: rgb(196, 156, 156);
 }
 
 body {
@@ -134,10 +134,11 @@ body {
 			}
 			&__tools {
 				display: inline-block;
-				margin-left: 1.25rem;
+				font-size: 0;
 				button {
 					width: 2.5rem;
 					height: 2.5rem;
+					margin-left: 0.4rem;
 					border: none;
 					border-radius: 0.625rem;
 					cursor: pointer;

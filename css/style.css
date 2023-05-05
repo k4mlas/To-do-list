@@ -138,11 +138,12 @@ body {
 }
 .list__body__quest__tools {
   display: inline-block;
-  margin-left: 1.25rem;
+  font-size: 0;
 }
 .list__body__quest__tools button {
   width: 2.5rem;
   height: 2.5rem;
+  margin-left: 0.4rem;
   border: none;
   border-radius: 0.625rem;
   cursor: pointer;

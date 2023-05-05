@@ -85,15 +85,39 @@ const addNewTask = () => {
 		$idNumber++;
 		$newTask = document.createElement('li');
 		$newTask.innerText = $todoInput.value;
-		$newTask.classList.add("list__body__quest__text")
+		$newTask.classList.add('list__body__quest__text');
+		$newTask.setAttribute('id', `todo-${$idNumber}`);
 		$ullist.appendChild($newTask);
+		createToolsArea();
+		$todoInput.value = '';
+		$alertInfo.textContent = '';
 	}
 };
 
 const enterKey = () => {
-	if (event.keyCode === 13) {
+	if (event.key == 'Enter') {
 		addNewTask();
 	}
+};
+
+const createToolsArea = () => {
+	const toolsPanel = document.createElement('div');
+	toolsPanel.classList.add('list__body__quest__tools');
+	$newTask.appendChild(toolsPanel);
+
+	const completeBtnTools = document.createElement('button');
+	completeBtnTools.classList.add('list__body__quest__tools__check');
+	completeBtnTools.innerHTML = '<i class="fa-solid fa-check"></i>';
+	const editBtnTools = document.createElement('button');
+	editBtnTools.classList.add('list__body__quest__tools__edit');
+	editBtnTools.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+	const deleteBtnTools = document.createElement('button');
+	deleteBtnTools.classList.add('list__body__quest__tools__delete');
+	deleteBtnTools.innerHTML = '<i class="fa-solid fa-trash"></i>';
+
+	toolsPanel.appendChild(completeBtnTools);
+	toolsPanel.appendChild(editBtnTools);
+	toolsPanel.appendChild(deleteBtnTools);
 };
 
 const showSetPanel = () => {
