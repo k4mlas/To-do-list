@@ -139,7 +139,16 @@ const checkClick = (e) => {
 			.closest('button')
 			.classList.contains('list__body__quest__tools__delete')
 	) {
-		console.log('deletr');
+		checkDeleteList(e);
+	}
+};
+
+const checkDeleteList = (e) => {
+	const deleteToDo = e.target.closest('li');
+	deleteToDo.remove('li');
+
+	if ($allTasks.lenght === 0) {
+		$todoInput.value = 'Brak zadań na liście';
 	}
 };
 
