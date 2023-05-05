@@ -152,7 +152,7 @@ const checkImgOne = () => {
 	$pictureThree.classList.remove('activ');
 	$pictureFour.classList.remove('activ');
 	$headerImg.style.backgroundImage =
-		'url(file:///Users/kamlas/Documents/Programowanie/PROJEKTY/ToDoLista2/img/arrizona.jpg)';
+		'url(../img/arrizona.jpg)';
 };
 const checkImgTwo = () => {
 	$pictureOne.classList.remove('activ');
