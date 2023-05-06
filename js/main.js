@@ -65,6 +65,10 @@ const prepareDOMElements = () => {
 	$alertInfo = document.querySelector('.list__body__info');
 	$ullist = document.querySelector('.list__body__quest');
 	$popup = document.querySelector('.edit');
+	$popupInput = document.querySelector('#edit');
+	$popupInfo = document.querySelector('.edit__panel__error');
+	$addPopupBtn = document.querySelector('.edit__panel__btn__opction--save');
+	$closeTodoBtn = document.querySelector('.edit__panel__btn__opction--cancel');
 };
 
 const prepareDOMEvens = () => {
@@ -79,6 +83,8 @@ const prepareDOMEvens = () => {
 	$pictureTwo.addEventListener('click', checkImgTwo);
 	$pictureThree.addEventListener('click', checkImgThree);
 	$pictureFour.addEventListener('click', checkImgFour);
+	$addPopupBtn.addEventListener('click', changeToDo);
+	$closeTodoBtn.addEventListener('click', closePopup);
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -137,7 +143,7 @@ const checkClick = (e) => {
 			.closest('button')
 			.classList.contains('list__body__quest__tools__edit')
 	) {
-		editTask();
+		editTask(e);
 	} else if (
 		e.target
 			.closest('button')
@@ -147,8 +153,26 @@ const checkClick = (e) => {
 	}
 };
 
-const editTask = () => {
+const editTask = (e) => {
+	const oldToDo = e.target.closest('li').id;
+	$editedTodo = document.getElementById(oldToDo);
+	$popupInput.value = $editedTodo.firstChild.textContent;
 	$popup.style.display = 'flex';
+};
+
+const changeToDo = () => {
+	if ($popupInput.value !== '') {
+		$editedTodo.firstChild.textContent = $popupInput.value;
+		$popupInfo.style.visibility = 'hidden';
+		$popup.style.display = 'none';
+	} else {
+		$popupInfo.textContent = 'Musisz podać jakąś treść!';
+		$popupInfo.style.visibility = 'visible';
+	}
+};
+
+const closePopup = () => {
+	$popup.style.display = 'none';
 };
 
 const checkDeleteList = (e) => {
