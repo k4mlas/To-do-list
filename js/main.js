@@ -63,6 +63,7 @@ const prepareDOMElements = () => {
 	$addBtn = document.querySelector('.list__header__btn');
 	$alertInfo = document.querySelector('.list__body__info');
 	$ullist = document.querySelector('.list__body__quest');
+	$popup = document.querySelector('.edit');
 };
 
 const prepareDOMEvens = () => {
@@ -133,7 +134,7 @@ const checkClick = (e) => {
 			.closest('button')
 			.classList.contains('list__body__quest__tools__edit')
 	) {
-		console.log('Edit');
+		editTask();
 	} else if (
 		e.target
 			.closest('button')
@@ -141,6 +142,10 @@ const checkClick = (e) => {
 	) {
 		checkDeleteList(e);
 	}
+};
+
+const editTask = () => {
+	$popup.style.display = 'flex';
 };
 
 const checkDeleteList = (e) => {
