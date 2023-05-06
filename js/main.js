@@ -61,6 +61,7 @@ const prepareDOMElements = () => {
 	//Zmiene do ToDoListy
 	$todoInput = document.querySelector('#listInput');
 	$addBtn = document.querySelector('.list__header__btn');
+	$allTasks = document.querySelectorAll('li');
 	$alertInfo = document.querySelector('.list__body__info');
 	$ullist = document.querySelector('.list__body__quest');
 	$popup = document.querySelector('.edit');
@@ -93,6 +94,8 @@ const addNewTask = () => {
 		createToolsArea();
 		$todoInput.value = '';
 		$alertInfo.textContent = '';
+	} else {
+		$alertInfo.textContent = 'Musisz wpisać treść zadania';
 	}
 };
 
@@ -152,8 +155,8 @@ const checkDeleteList = (e) => {
 	const deleteToDo = e.target.closest('li');
 	deleteToDo.remove('li');
 
-	if ($allTasks.lenght === 0) {
-		$todoInput.value = 'Brak zadań na liście';
+	if ($allTasks.length === 0) {
+		$alertInfo.textContent = 'Brak zadań na liście';
 	}
 };
 
