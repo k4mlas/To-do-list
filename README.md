@@ -4,7 +4,7 @@
 <p>https://k4mlas.github.io/To-do-list/</p>
 <br>
 <br>
-<img width="799" alt="Zrzut ekranu 2023-06-20 o 16 42 42" src="https://github.com/k4mlas/To-do-list/assets/112805847/b34a9f4e-f8e0-4e23-99ec-c14f11e072a1">
+<img align="cennter" width="799" alt="Zrzut ekranu 2023-06-20 o 16 42 42" src="https://github.com/k4mlas/To-do-list/assets/112805847/b34a9f4e-f8e0-4e23-99ec-c14f11e072a1">
 <br>
 <br>
 <img width="797" alt="Zrzut ekranu 2023-06-20 o 17 00 27" src="https://github.com/k4mlas/To-do-list/assets/112805847/25ef9459-744a-4240-9e47-8ea90bbdb563">
