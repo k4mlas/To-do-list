@@ -1,7 +1,7 @@
 # To-do-list
-<p>I invite you to check my project by clicking on the link below</p>
+I invite you to check my project by clicking on the link below
 <br>
-<p>https://k4mlas.github.io/To-do-list/</p>
+### [Go to the page! 🙂](https://k4mlas.github.io/To-do-list/)
 <br>
 <br>
 <img align="center" width="799" alt="Zrzut ekranu 2023-06-20 o 16 42 42" src="https://github.com/k4mlas/To-do-list/assets/112805847/b34a9f4e-f8e0-4e23-99ec-c14f11e072a1">
